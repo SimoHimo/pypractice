@@ -5,6 +5,4 @@ if str==str1:
     print("is Palindrome")
 else:
     print("isn't palindrome")
-
-
-print ("2nd ")
+    
